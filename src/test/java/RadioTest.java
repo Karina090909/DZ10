@@ -14,6 +14,19 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void stationCountTest() {
+        Radio radio = new Radio(15);
+
+        radio.setCurrentStation(5);
+        radio.setCurrentStation(15);
+
+        int actual = radio.getCurrenStation();
+        int expected = 5;
+
+        Assertions.assertEquals(expected, actual);
+    }
+
 
     @Test
     public void setCurrentStationNineTest() {
@@ -63,6 +76,17 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+    @Test
+    public void setNextOverNineTest() {
+        Radio radio = new Radio(15);
+
+        radio.setCurrentStation(14);
+        radio.next();
+        int actual = radio.getCurrenStation();
+        int expected = 0;
+
+        Assertions.assertEquals(expected, actual);
+    }
 
     @Test
     public void setPrevTest() {
@@ -84,6 +108,17 @@ class RadioTest {
         radio.prev();
         int actual = radio.getCurrenStation();
         int expected = 9;
+
+        Assertions.assertEquals(expected, actual);
+    }
+    @Test
+    public void setPrevOverZeroTest() {
+        Radio radio = new Radio(15);
+
+        radio.setCurrentStation(0);
+        radio.prev();
+        int actual = radio.getCurrenStation();
+        int expected = 14;
 
         Assertions.assertEquals(expected, actual);
     }
