@@ -8,6 +8,7 @@ public class Radio {
     public Radio(int stationCount) {
         this.stationCount = stationCount;
     }
+
     public Radio() {
         this.stationCount = 10;
     }

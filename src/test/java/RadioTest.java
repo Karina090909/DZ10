@@ -14,6 +14,7 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void stationCountTest() {
         Radio radio = new Radio(15);
@@ -76,6 +77,7 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void setNextOverNineTest() {
         Radio radio = new Radio(15);
@@ -111,6 +113,7 @@ class RadioTest {
 
         Assertions.assertEquals(expected, actual);
     }
+
     @Test
     public void setPrevOverZeroTest() {
         Radio radio = new Radio(15);
